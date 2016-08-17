@@ -41,6 +41,16 @@ class NotesApplication {
 	// Searches note with a search text
 	search(search_text){
 		
+		for(var i = 0; i < this.notes.length; i++){
+			var note = this.notes[i].note;
+			
+			if(note.search(search_text) !== -1){
+				return this.notes[i];
+			}else{
+				return "not found";
+			}
+		}
+
 	}
 
 	// Deletes a note with its ID
