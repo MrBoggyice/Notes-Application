@@ -1,4 +1,17 @@
+/**
+ * Note Class for new notes
+ * @class
+ */
+
 class Note{
+
+	/**
+	 * Note Constructor
+	 * @constructs
+	 * @param{Number} id - The Note ID
+	 * @param{String} content - The Note Content
+	 * @param{String} author - The Note Author
+	 */
 	constructor(id, content, author){
 		this.id = id;
 		this.content = content;
@@ -6,18 +19,36 @@ class Note{
 	}
 }
 
+
+/**
+ * NotesApplication Class with a few behaviours
+ * @class
+ */
 class NotesApplication {
+
+	/**
+	 * NoteApplication Constructor
+	 * @constructs
+	 */
 	constructor(){
 		this.notes = [];
 	}
 
-	// Creates a note and pushes to note list
+	/**
+	 * Creates and saves note in the list
+	 * @function
+	 * @param {String} note_content - Note content
+	 * @param {String} author - Note author
+	 */
 	create(note_content, author){
 		var content = new Note(this.notes.length, note_content, author);
 		this.notes.push(content);
 	}
 
-	// List the available notes
+	/**
+	 * Lists all notes
+	 * @function
+	 */
 	listNotes(){
 		for(var i = 0; i < this.notes.length; i++) {
 		      console.log("Note ID: " + this.notes[i].id);
@@ -27,18 +58,26 @@ class NotesApplication {
 	}
 
 
-	// Gets a note with its id
+	/**
+	 * Gets a specific note with a given ID
+	 * @function
+	 * @param {Number} note_id - Note ID
+	 */
 	get(note_id){
 		for(var i = 0; i < this.notes.length; i++){
 			if(note_id === this.notes[i].id){
-				return this.notes[i];
+				return this.notes[i].content;
 			}
 		}
 		return 'no note with such id';
 
 	}
 
-	// Searches note with a search text
+	/**
+	 * Searches the notes with a given String
+	 * @function
+	 * @param {String} search_text - Search Sring
+	 */
 	search(search_text){
 		
 		for(var i = 0; i < this.notes.length; i++){
@@ -52,7 +91,11 @@ class NotesApplication {
 
 	}
 
-	// Deletes a note with its ID
+	/**
+	 * Deletes a specific note with a given ID
+	 * @function
+	 * @param {Number} note_id - Note ID
+	 */
 	delete(note_id){
 		for(var i = 0; i < this.notes.length; i++){
 			if(note_id === this.notes[i].id){
@@ -64,7 +107,12 @@ class NotesApplication {
 	}
 	
 
-	// Updates a note
+	/**
+	 * Edits a note content
+	 * @function
+	 * @param {Number} note_id - Note ID
+	 * @param {String} new_content - New content
+	 */
 	edit(note_id, new_content){
 		for(var i = 0; i < this.notes.length; i++){
 			if(note_id === this.notes[i].id){
