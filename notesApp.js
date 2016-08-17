@@ -99,7 +99,7 @@ class NotesApplication {
 	delete(note_id){
 		for(var i = 0; i < this.notes.length; i++){
 			if(note_id === this.notes[i].id){
-				this.notes.splice(this.notes[i].id, 1);
+				this.notes.splice(i, 1);
 				return "note deleted \n\n";
 			}
 		}
