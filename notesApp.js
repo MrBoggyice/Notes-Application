@@ -57,9 +57,10 @@ class NotesApplication {
 		for(var i = 0; i < this.notes.length; i++){
 			if(note_id === this.notes[i].id){
 				this.notes.splice(this.notes[i].id, 1);
-				console.log("note deleted \n\n") ;
+				return "note deleted \n\n";
 			}
 		}
+		return "There's no note with such id";
 	}
 	
 
@@ -68,8 +69,10 @@ class NotesApplication {
 		for(var i = 0; i < this.notes.length; i++){
 			if(note_id === this.notes[i].id){
 				this.notes[i].content = new_content;
+				return "content edited";
 			}
 		}
-
+		return "There's no such note";
 	}
 }
+
