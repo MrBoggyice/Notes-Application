@@ -51,13 +51,25 @@ class NotesApplication {
 		return "not found";
 
 	}
+
 	// Deletes a note with its ID
 	delete(note_id){
-		
+		for(var i = 0; i < this.notes.length; i++){
+			if(note_id === this.notes[i].id){
+				this.notes.splice(this.notes[i].id, 1);
+				console.log("note deleted \n\n") ;
+			}
+		}
 	}
+	
 
 	// Updates a note
 	edit(note_id, new_content){
+		for(var i = 0; i < this.notes.length; i++){
+			if(note_id === this.notes[i].id){
+				this.notes[i].content = new_content;
+			}
+		}
 
 	}
 }
