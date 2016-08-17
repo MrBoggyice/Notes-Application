@@ -6,12 +6,12 @@ class NotesApplication {
 
 	// Creates a note and pushes to note list
 	create(note_content){
-
+		this.notes.push(note_content);
 	}
 
 	// List the available notes
 	listNotes(){
-
+		
 	}
 
 	// Gets a note with its id
