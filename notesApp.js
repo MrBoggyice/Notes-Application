@@ -20,9 +20,9 @@ class NotesApplication {
 	// List the available notes
 	listNotes(){
 		for(var i = 0; i < this.notes.length; i++) {
-	      console.log("Note ID: " + this.notes[i].id);
-	      console.log(this.notes[i].content + "\n");
-	      console.log("By Author " + this.notes[i].author + "\n\n");
+		      console.log("Note ID: " + this.notes[i].id);
+		      console.log(this.notes[i].content + "\n");
+		      console.log("By Author " + this.notes[i].author + "\n\n");
 	    }
 	}
 
