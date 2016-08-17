@@ -6,7 +6,7 @@ class Notes{
 }
 
 class NotesApplication {
-	constructor{
+	constructor(){
 		this.notes = [];
 	}
 
