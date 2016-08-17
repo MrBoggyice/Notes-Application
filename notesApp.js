@@ -19,7 +19,7 @@ class NotesApplication {
 	// List the available notes
 	listNotes(){
 		for(var i = 0; i < this.notes.length; i++) {
-	      console.log("Note ID: " + this.notes.indexOf(i));
+	      console.log("Note ID: " + this.notes.indexOf(this.notes[i]));
 	      console.log(this.notes[i] + "\n");
 	      console.log("By Author " + this.notes[i].author + "\n\n");
 	    }
