@@ -84,7 +84,7 @@ class NotesApplication {
 			var note = this.notes[i].content;
 			
 			if(note.search(search_text) !== -1){
-				return this.notes[i];
+				return this.notes[i].content;
 			}
 		}
 		return "not found";
