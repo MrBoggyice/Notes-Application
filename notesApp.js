@@ -84,7 +84,7 @@ class NotesApplication {
 			var note = this.notes[i].content;
 			
 			if(note.search(search_text) !== -1){
-				return this.notes[i];
+				return this.notes[i].content;
 			}
 		}
 		return "not found";
@@ -99,7 +99,7 @@ class NotesApplication {
 	delete(note_id){
 		for(var i = 0; i < this.notes.length; i++){
 			if(note_id === this.notes[i].id){
-				this.notes.splice(this.notes[i].id, 1);
+				this.notes.splice(i, 1);
 				return "note deleted \n\n";
 			}
 		}
